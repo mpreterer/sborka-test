@@ -1,7 +1,14 @@
-{% from "../../components/menu/menu.nunj" import menu %}
-
-<div class="header">
-	<div class="container">
-		{{ menu() }}
-	</div>
-</div>
+<header class="header js-header">
+	<a href="/" class="header__link-logo">
+		<img src="../../assets/images/logo.svg" alt="logo" />
+	</a>
+	<div class="header__right-panel">
+		<div class="header__search-btn"></div>
+		<div class="header__basket">
+			<div class="header__basket-items js-header-basket">2</div>
+		</div>
+		<button class="header__burger" type="button">
+			<div class="header__burger-line"></div>
+		</button>
+	<div>
+</header>
