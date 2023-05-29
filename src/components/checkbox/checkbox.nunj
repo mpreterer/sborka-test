@@ -1,0 +1,6 @@
+{% macro checkbox(props) %}
+   <div class="checkbox js-checkbox">
+    <input type="checkbox" class="checkbox__input" name="{{ props.id }}">
+    <label for="{{ props.id }}" class="checkbox__text">{{ props.text }}</label>
+   </div>
+{% endmacro %}
