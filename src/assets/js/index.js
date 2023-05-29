@@ -9,6 +9,10 @@
 // 	overwrite: 'auto',
 // });
 
+import '../../components/checkbox/index';
+import '../../components/product_card/index';
+import '../../components/billing/index';
+
 class ProjectApp {
 	constructor() {
 		this.env = require('./utils/env').default;

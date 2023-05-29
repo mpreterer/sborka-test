@@ -1,0 +1,133 @@
+@import '../../styles/lib/mixins';
+
+.payment {
+	display: flex;
+	height: fit-content;
+
+	&__progress-bar-container {
+		margin-bottom: 60px;
+
+		@include desktop-width {
+			margin-left: 13px;
+		}
+
+		@include mobile-width {
+			margin-left: 0;
+		}
+	}
+
+	&__panel-payment {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		min-height: 100vh;
+		padding: 59px 66px 68px 63px;
+		border-right: 1px solid #cfcfcf;
+
+		@include desktop-width {
+			padding: 59px 66px 68px 50px;
+		}
+
+		@include mobile-width {
+			padding: 60px 10px;
+			border: none;
+		}
+	}
+
+	&__step {
+		&-number {
+			display: block;
+			padding: 1px;
+			border-color: #3366ff;
+			border-radius: 50%;
+		}
+	}
+
+	&__title {
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 30px;
+
+		&_padding {
+			padding-left: 27px;
+
+			@include desktop-width {
+				padding-left: 30px;
+			}
+
+			@include mobile-width {
+				padding-left: 0;
+			}
+		}
+
+		&_medium-margin {
+			margin-bottom: 38px;
+
+			@include mobile-width {
+				margin-bottom: 19px;
+			}
+		}
+	}
+
+	&__billing-info {
+		max-width: 630px;
+		margin-left: 210px;
+
+		@include desktop-width {
+			margin-left: 0;
+		}
+	}
+
+	&__credit-card-info {
+		max-width: 550px;
+		background: #ffffff;
+		border: 1px solid #cfcfcf;
+		box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.19);
+		border-radius: 5px;
+		padding: 15px 30px 46px 26px;
+		margin-bottom: 40px;
+
+		@include desktop-width {
+			padding: 15px 30px 46px 29px;
+		}
+
+		@include mobile-width {
+			box-shadow: none;
+			border: none;
+			padding: 0;
+			margin-bottom: 35px;
+		}
+	}
+
+	&__container-btns {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		margin-left: 30px;
+
+		@include desktop-width {
+			padding-left: 18px;
+		}
+
+		@include tablet-width {
+			padding-left: 0;
+			padding-right: 18px;
+		}
+
+		@include mobile-width {
+			margin-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	&__right-panel-payment {
+		min-width: 410px;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+
+		@include tablet-width {
+			display: none;
+		}
+	}
+}

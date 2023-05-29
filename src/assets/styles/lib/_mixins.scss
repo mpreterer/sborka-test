@@ -16,6 +16,30 @@
 	-webkit-appearance: button;
 }
 
+@mixin hd-width {
+	@media (max-width: (1620px)) {
+		@content;
+	}
+}
+
+@mixin desktop-width {
+	@media (max-width: (1440px)) {
+		@content;
+	}
+}
+
+@mixin tablet-width {
+	@media (max-width: (1050px)) {
+		@content;
+	}
+}
+
+@mixin mobile-width {
+	@media (max-width: (700px)) {
+		@content;
+	}
+}
+
 @mixin hide-input-file {
 	@include hide-input;
 	font-size: 100px;

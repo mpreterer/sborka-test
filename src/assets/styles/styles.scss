@@ -9,9 +9,17 @@
 
 // ======= COMPONENTS =======
 @import '../../components/button/button';
+@import '../../components/input_group/input_group';
+@import '../../components/checkbox/checkbox';
+@import '../../components/progress_bar/progress_bar';
+@import '../../components/product_card/product_card';
+@import '../../components/radio_button/radio_button';
+@import '../../components/basket/basket';
+@import '../../components/billing/billing';
 
 // ======= INCLUDES =======
 @import '../../includes/header/header';
 
 // ======= PAGES =======
 @import 'pages/main';
+@import 'pages/payment';
