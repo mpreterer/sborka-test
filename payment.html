@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Payment</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+
+			<link rel="stylesheet" href="assets/css/styles.css?hash" />
+	</head>
+	<body>
+
+		<div class="wrapper">
+
+<header class="header js-header">
+	<a href="/" class="header__link-logo">
+		<img src="../../assets/images/logo.svg" alt="logo" />
+	</a>
+	<div class="header__right-panel">
+		<div class="header__search-btn"></div>
+		<div class="header__basket">
+			<div class="header__basket-items js-header-basket">2</div>
+		</div>
+		<button class="header__burger" type="button">
+			<div class="header__burger-line"></div>
+		</button>
+	<div>
+</header>
+
+
+	<div class="payment">
+		<div class="payment__panel-payment">
+			<div class="payment__progress-bar-container">
+				  <ul class="progress-bar">
+      <li class="progress-bar__item">
+        <div class="progress-bar__item-info">
+          <span class="progress-bar__number 
+ progress-bar__number_filled 
+          ">
+              1
+          </span>
+          <div class="progress-bar__text">Account</div>
+        </div>
+        <div class="progress-bar__line
+        ">
+        </div>
+      </li>
+      <li class="progress-bar__item">
+        <div class="progress-bar__item-info">
+          <span class="progress-bar__number 
+ progress-bar__number_filled 
+          ">
+              2
+          </span>
+          <div class="progress-bar__text">Shipping</div>
+        </div>
+        <div class="progress-bar__line
+        ">
+        </div>
+      </li>
+      <li class="progress-bar__item">
+        <div class="progress-bar__item-info">
+          <span class="progress-bar__number 
+ 
+ progress-bar__number_idle          ">
+              3
+          </span>
+          <div class="progress-bar__text">Billing</div>
+        </div>
+        <div class="progress-bar__line
+ progress-bar__line_grey        ">
+        </div>
+      </li>
+      <li class="progress-bar__item">
+        <div class="progress-bar__item-info">
+          <span class="progress-bar__number 
+ 
+ progress-bar__number_disabled          ">
+              4
+          </span>
+          <div class="progress-bar__text">Review</div>
+        </div>
+        <div class="progress-bar__line
+ progress-bar__line_hidden        ">
+        </div>
+      </li>
+  </ul>
+
+			</div>
+			<div class="payment__billing-info">
+				<h1 class="payment__title payment__title_padding payment__title_medium-margin">Billing Information</h1>
+				    <div class="billing js-billing">
+        <div class="billing__method">
+              <div for="radio1" class="radio-button">
+    <input type="radio" id="radio1" name="paymentMethod" value="card" class="radio-button__radio js-radio-input">
+      <label for="radio1" class="radio-button__text">Pay with Credit Card  
+      </label>
+  </div>
+
+              <div for="radio2" class="radio-button">
+    <input type="radio" id="radio2" name="paymentMethod" value="paypal" class="radio-button__radio js-radio-input">
+      <label for="radio2" class="radio-button__text">  
+          <img src="./assets/images/paypal.svg" alt="" class="radio-button__image">
+      </label>
+  </div>
+
+        </div>
+        <div class="billing__credit-card-info js-credit-card-container">
+              <div class="input-group js-input-group">
+    <div class="input-group__text">
+      <label for="username" class="input-group__label">Name on card</label>
+    </div>
+    <input type="text" maxlength="" name="username" class="input-group__input-field" placeholder="Placeholder Text">
+  </div>
+
+  <script>
+    function toggleDescription(element) {
+      var description = element.querySelector('.js-input-group-desc');
+      if (description.style.display === 'none') {
+        description.style.display = 'block';
+      } else {
+        description.style.display = 'none';
+      }
+    }
+  </script>
+
+            <div class="billing__card-container">
+                  <div class="input-group js-input-group">
+    <div class="input-group__text">
+      <label for="cardNumber" class="input-group__label">Card number</label>
+    </div>
+    <input type="text" maxlength="" name="cardNumber" class="input-group__input-field" placeholder="">
+  </div>
+
+  <script>
+    function toggleDescription(element) {
+      var description = element.querySelector('.js-input-group-desc');
+      if (description.style.display === 'none') {
+        description.style.display = 'block';
+      } else {
+        description.style.display = 'none';
+      }
+    }
+  </script>
+
+                  <div class="input-group js-input-group">
+    <input type="text" maxlength="" name="cardNumber" class="input-group__input-field" placeholder="">
+  </div>
+
+  <script>
+    function toggleDescription(element) {
+      var description = element.querySelector('.js-input-group-desc');
+      if (description.style.display === 'none') {
+        description.style.display = 'block';
+      } else {
+        description.style.display = 'none';
+      }
+    }
+  </script>
+
+                  <div class="input-group js-input-group">
+    <input type="text" maxlength="" name="cardNumber" class="input-group__input-field" placeholder="">
+  </div>
+
+  <script>
+    function toggleDescription(element) {
+      var description = element.querySelector('.js-input-group-desc');
+      if (description.style.display === 'none') {
+        description.style.display = 'block';
+      } else {
+        description.style.display = 'none';
+      }
+    }
+  </script>
+
+                  <div class="input-group js-input-group">
+    <input type="text" maxlength="" name="cardNumber" class="input-group__input-field" placeholder="">
+  </div>
+
+  <script>
+    function toggleDescription(element) {
+      var description = element.querySelector('.js-input-group-desc');
+      if (description.style.display === 'none') {
+        description.style.display = 'block';
+      } else {
+        description.style.display = 'none';
+      }
+    }
+  </script>
+
+            </div>
+            <div class="billing__card-description">
+                  <div class="input-group js-input-group">
+    <div class="input-group__text">
+      <label for="expireDate" class="input-group__label">Expire date</label>
+    </div>
+    <input type="text" maxlength="" name="expireDate" class="input-group__input-field" placeholder="">
+  </div>
+
+  <script>
+    function toggleDescription(element) {
+      var description = element.querySelector('.js-input-group-desc');
+      if (description.style.display === 'none') {
+        description.style.display = 'block';
+      } else {
+        description.style.display = 'none';
+      }
+    }
+  </script>
+
+                  <div class="input-group js-input-group">
+    <div class="input-group__text">
+      <label for="cvv" class="input-group__label">CVV code</label>
+        <div class="input-group__info js-input-group-info-btn" onclick="toggleDescription(this)">
+        ?
+          <span class="input-group__info-txt js-input-group-desc">your description</span>
+        </div>
+    </div>
+    <input type="text" maxlength="" name="cvv" class="input-group__input-field" placeholder="">
+  </div>
+
+  <script>
+    function toggleDescription(element) {
+      var description = element.querySelector('.js-input-group-desc');
+      if (description.style.display === 'none') {
+        description.style.display = 'block';
+      } else {
+        description.style.display = 'none';
+      }
+    }
+  </script>
+
+            </div>
+        </div>
+        <div class="billing__container-paypal js-container-paypal">
+            форма для оплаты paypal
+        </div>
+        <div class="billing__checkboxes-container">
+               <div class="checkbox js-checkbox">
+    <input type="checkbox" class="checkbox__input" name="saveCard">
+    <label for="saveCard" class="checkbox__text">Save information of this credit card</label>
+   </div>
+
+               <div class="checkbox js-checkbox">
+    <input type="checkbox" class="checkbox__input" name="privacyPolicies">
+    <label for="privacyPolicies" class="checkbox__text">I accept the terms and comditions and the Privacy Policies</label>
+   </div>
+
+        </div>
+    </div>
+
+				<div class="payment__container-btns">
+					    <a href="change-me/mock" class="button button__link">
+      Back
+    </a>
+	</button>
+
+					    <a href="change-me/mock" class="button button_filled button__link">
+      Check Out
+    </a>
+	</button>
+
+				</div>
+			</div>
+		</div>
+		<div class="payment__right-panel-payment">
+			    <div class="basket">
+        <div class="basket__container">
+            <p class="basket__title">My basket</p>
+            <ul class="basket__products js-basket-products">
+                        <li class="product-card__item js-product-card">
+      <div class="product-card__image">
+        <img src="./assets/images/jacket.png" alt="Product Image">
+      </div>
+      <div class="product-card__details">
+        <p class="product-card__description">Amet minim mollit non deserunt ullamco est sit</p>
+        <div class="product-card__counter">
+          <button class="product-card__button js-btn-minus">-</button>
+          <input class="product-card__quantity js-quantity" value=1 readonly/>
+          <button class="product-card__button js-btn-plus">+</button>
+          <span class="product-card__price-container">$ <input class="product-card__price js-price" data-default-price=525 value=525></span>
+        </div>
+      </div>
+      <button class="product-card__delete js-btn-delete">
+      </button>
+    </li>
+
+                        <li class="product-card__item js-product-card">
+      <div class="product-card__image">
+        <img src="./assets/images/sneakers.png" alt="Product Image">
+      </div>
+      <div class="product-card__details">
+        <p class="product-card__description">Amet minim mollit non</p>
+        <div class="product-card__counter">
+          <button class="product-card__button js-btn-minus">-</button>
+          <input class="product-card__quantity js-quantity" value=1 readonly/>
+          <button class="product-card__button js-btn-plus">+</button>
+          <span class="product-card__price-container">$ <input class="product-card__price js-price" data-default-price=525 value=525></span>
+        </div>
+      </div>
+      <button class="product-card__delete js-btn-delete">
+      </button>
+    </li>
+
+            </ul>
+        </div>
+        <div class="basket__promo-container">
+            <p class="basket__title">Promo code</p>
+            <div class="basket__promo">
+                  <div class="input-group js-input-group">
+    <input type="text" maxlength="" name="promocode" class="input-group__input-field" placeholder="Placeholder Text">
+  </div>
+
+  <script>
+    function toggleDescription(element) {
+      var description = element.querySelector('.js-input-group-desc');
+      if (description.style.display === 'none') {
+        description.style.display = 'block';
+      } else {
+        description.style.display = 'none';
+      }
+    }
+  </script>
+
+                		<button class="button button_filled">
+		Apply
+		</button>
+	</button>
+
+            </div>
+        </div>
+        <div class="basket__total-price-container">
+            <div class="basket__price-container">
+                <span class="basket__caption">Subtotal</span>
+                <span class="basket__subtotal">$<span class="js-subtotal-price">0</span></span>
+            </div>
+            <div class="basket__price-container">
+                <span class="basket__caption">Tax</span>
+                <span class="basket__tax">$100</span>
+            </div>
+            <div class="basket__price-container">
+                <span class="basket__caption">Shipping</span>
+                <span class="basket__shipping">$150</span>
+            </div>
+            <div class="basket__price-container basket__price-container_bold-txt">
+                <span class="basket__caption">Total</span>
+                <span class="basket__total-price">$<span class="js-total-price"></span></span>
+            </div>
+        </div>
+    </div>
+
+		</div>
+	</div>
+		</div>
+
+			<script src="assets/js/bundle.js?hash"></script>
+	</body>
+</html>
