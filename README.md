@@ -1,5 +1,7 @@
 # SP.Starter
 
+Ссылка не тестовое: https://mpreterer.github.io/sborka-test/payment.html
+
 **Шаблон проекта для быстрого старта. Работает на Node 16+.**
 
 ## Старт проекта
