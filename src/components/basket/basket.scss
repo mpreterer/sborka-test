@@ -1,0 +1,66 @@
+.basket {
+	width: 100%;
+
+	&__container {
+		width: 100%;
+		padding: 40px;
+		border-bottom: 1px solid #cfcfcf;
+	}
+
+	&__title {
+		font-size: 18px;
+		font-weight: bold;
+		margin-bottom: 30px;
+
+		&_padding {
+			padding-left: 27px;
+
+			@include desktop-width {
+				padding-left: 30px;
+			}
+
+			@include mobile-width {
+				padding-left: 0;
+			}
+		}
+
+		&_medium-margin {
+			margin-bottom: 38px;
+		}
+	}
+
+	&__promo-container {
+		width: 100%;
+		padding: 38px 40px 39px 40px;
+		border-bottom: 1px solid #cfcfcf;
+
+		& .input-group {
+			margin-right: 10px;
+		}
+	}
+
+	&__promo {
+		display: flex;
+	}
+
+	&__total-price-container {
+		padding: 40px 55px 40px 40px;
+		width: 100%;
+	}
+
+	&__price-container {
+		display: flex;
+		justify-content: space-between;
+		line-height: 34px;
+		font-size: 14px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		&_bold-txt {
+			font-weight: bold;
+			font-size: 18px;
+		}
+	}
+}

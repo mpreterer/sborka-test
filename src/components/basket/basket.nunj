@@ -1,0 +1,53 @@
+{% from "../product_card/product_card.nunj" import product_card %}
+{% from "../input_group/input_group.nunj" import input_group %}
+{% from "../button/button.nunj" import button %}
+
+{% macro basket(props) %}
+    <div class="basket">
+        <div class="basket__container">
+            <p class="basket__title">My basket</p>
+            <ul class="basket__products js-basket-products">
+                {% for product in props.products %}
+                    {{ product_card({
+                        image: product.image,
+                        quantity: product.quantity,
+                        description: product.description,
+                        price: product.price,
+                        currency: props.currency
+                    }) }}
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="basket__promo-container">
+            <p class="basket__title">Promo code</p>
+            <div class="basket__promo">
+                {{ input_group({
+                    name: 'promocode',
+                    placeholder: 'Placeholder Text'
+                })}}
+                {{ button({
+                    name: 'Apply',
+                    filled: true
+                }) }}
+            </div>
+        </div>
+        <div class="basket__total-price-container">
+            <div class="basket__price-container">
+                <span class="basket__caption">Subtotal</span>
+                <span class="basket__subtotal">{{ props.currency }}<span class="js-subtotal-price">0</span></span>
+            </div>
+            <div class="basket__price-container">
+                <span class="basket__caption">Tax</span>
+                <span class="basket__tax">{{ props.currency }}{{ props.tax }}</span>
+            </div>
+            <div class="basket__price-container">
+                <span class="basket__caption">Shipping</span>
+                <span class="basket__shipping">{{ props.currency }}{{ props.shipping }}</span>
+            </div>
+            <div class="basket__price-container basket__price-container_bold-txt">
+                <span class="basket__caption">Total</span>
+                <span class="basket__total-price">{{ props.currency }}<span class="js-total-price"></span></span>
+            </div>
+        </div>
+    </div>
+{% endmacro %}
