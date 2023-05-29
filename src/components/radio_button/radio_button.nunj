@@ -1,0 +1,10 @@
+{% macro radio_button(props) %}
+  <div for="{{ props.id }}" class="radio-button">
+    <input type="radio" id="{{ props.id }}" name="{{ props.name }}" value="{{ props.value }}" class="radio-button__radio js-radio-input">
+      <label for="{{ props.id }}" class="radio-button__text">{{ props.text }}  
+        {% if props.imageUrl %}
+          <img src="{{ props.imageUrl }}" alt="{{ props.text }}" class="radio-button__image">
+        {% endif %}
+      </label>
+  </div>
+{% endmacro %}
