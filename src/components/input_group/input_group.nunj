@@ -1,0 +1,27 @@
+{% macro input_group(props) %}
+  <div class="input-group js-input-group">
+    {% if props.label %}
+    <div class="input-group__text">
+      <label for="{{ props.name }}" class="input-group__label">{{ props.label }}</label>
+       {% if props.description %}
+        <div class="input-group__info js-input-group-info-btn" onclick="toggleDescription(this)">
+        ?
+          <span class="input-group__info-txt js-input-group-desc">{{ props.description }}</span>
+        </div>
+      {% endif %}
+    </div>
+    {% endif %}
+    <input type="text" maxlength="{{ props.maxlength }}" name="{{ props.name }}" class="input-group__input-field" placeholder="{{ props.placeholder }}">
+  </div>
+
+  <script>
+    function toggleDescription(element) {
+      var description = element.querySelector('.js-input-group-desc');
+      if (description.style.display === 'none') {
+        description.style.display = 'block';
+      } else {
+        description.style.display = 'none';
+      }
+    }
+  </script>
+{% endmacro %}
