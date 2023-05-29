@@ -1,0 +1,18 @@
+{% macro product_card(props) %}
+    <li class="product-card__item js-product-card">
+      <div class="product-card__image">
+        <img src="{{ props.image }}" alt="Product Image">
+      </div>
+      <div class="product-card__details">
+        <p class="product-card__description">{{ props.description }}</p>
+        <div class="product-card__counter">
+          <button class="product-card__button js-btn-minus">-</button>
+          <input class="product-card__quantity js-quantity" value={{props.quantity}} readonly/>
+          <button class="product-card__button js-btn-plus">+</button>
+          <span class="product-card__price-container">{{ props.currency}} <input class="product-card__price js-price" data-default-price={{ props.price }} value={{ props.price }}></span>
+        </div>
+      </div>
+      <button class="product-card__delete js-btn-delete">
+      </button>
+    </li>
+{% endmacro %}
