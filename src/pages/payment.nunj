@@ -1,0 +1,80 @@
+{% extends "../templates/base.nunj" %}
+
+{% from "../components/button/button.nunj" import button %}
+{% from "../components/input_group/input_group.nunj" import input_group %}
+{% from "../components/radio_button/radio_button.nunj" import radio_button %}
+{% from "../components/checkbox/checkbox.nunj" import checkbox %}
+{% from "../components/progress_bar/progress_bar.nunj" import progress_bar %}
+{% from "../components/basket/basket.nunj" import basket %}
+{% from "../components/billing/billing.nunj" import billing %}
+
+{% block title %}Payment{{ super() }}{% endblock title %}
+
+{% block content %}
+
+    {% include '../includes/header/header.nunj' %}
+	{% set products = {
+		list: [
+			{
+				image: './assets/images/jacket.png',
+				quantity: 1,
+				description: "Amet minim mollit non deserunt ullamco est sit",
+				price: 525
+			},
+			{
+				image: './assets/images/sneakers.png',
+				quantity: 1,
+				description: "Amet minim mollit non",
+				price: 525
+			}
+		],
+		currency: "$",
+		tax: 100,
+		shipping: 150
+		} 
+	%}
+
+	{% set prices = {
+		tax: 100,
+		shipping: 150
+	}
+	%}
+
+	<div class="payment">
+		<div class="payment__panel-payment">
+			<div class="payment__progress-bar-container">
+				{{ progress_bar({
+					data: [
+						{ number: '1', text: "Account", filled: true },
+						{ number: '2', text: "Shipping", filled: true },
+						{ number: '3', text: "Billing", idle: true, greyLine: true  },
+						{ number: '4', text: "Review", hiddenLine: true, disabled: true }
+					]
+				}) }}
+			</div>
+			<div class="payment__billing-info">
+				<h1 class="payment__title payment__title_padding payment__title_medium-margin">Billing Information</h1>
+				{{ billing({}) }}
+				<div class="payment__container-btns">
+					{{ button({
+						name: 'Back',
+						link: "change-me/mock"
+					}) }}
+					{{ button({
+						name: 'Check Out',
+						filled: true,
+						link: "change-me/mock"
+					}) }}
+				</div>
+			</div>
+		</div>
+		<div class="payment__right-panel-payment">
+			{{ basket({
+				products: products.list,
+				currency: products.currency,
+				tax: products.tax,
+				shipping: products.shipping
+			}) }}
+		</div>
+	</div>
+{% endblock %}
