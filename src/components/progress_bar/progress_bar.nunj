@@ -1,0 +1,23 @@
+{% macro progress_bar(props) %}
+  <ul class="progress-bar">
+    {% for item in props.data %}
+      <li class="progress-bar__item">
+        <div class="progress-bar__item-info">
+          <span class="progress-bar__number 
+              {% if item.filled %} progress-bar__number_filled{% endif %} 
+              {% if item.disabled %} progress-bar__number_disabled{% endif %}
+              {% if item.idle %} progress-bar__number_idle{% endif %}
+          ">
+              {{ item.number }}
+          </span>
+          <div class="progress-bar__text">{{ item.text }}</div>
+        </div>
+        <div class="progress-bar__line
+            {% if item.greyLine %} progress-bar__line_grey{% endif %}
+            {% if item.hiddenLine %} progress-bar__line_hidden{% endif %}
+        ">
+        </div>
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}
