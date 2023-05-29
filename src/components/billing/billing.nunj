@@ -1,0 +1,64 @@
+{% from "../radio_button/radio_button.nunj" import radio_button %}
+{% from "../input_group/input_group.nunj" import input_group %}
+{% from "../checkbox/checkbox.nunj" import checkbox %}
+
+{% macro billing(props) %}
+    <div class="billing js-billing">
+        <div class="billing__method">
+            {{ radio_button({
+                id: "radio1", 
+                name: "paymentMethod",
+                value: "card",
+                text: "Pay with Credit Card"
+                })
+            }}
+            {{ radio_button({
+                id:"radio2",
+                name:"paymentMethod",
+                value:"paypal",
+                imageUrl:"./assets/images/paypal.svg"
+                })
+            }}
+        </div>
+        <div class="billing__credit-card-info js-credit-card-container">
+            {{ input_group({
+                name: "username",
+                label: "Name on card",
+                placeholder: "Placeholder Text"
+            })}}
+            <div class="billing__card-container">
+                {{ input_group({
+                    name: "cardNumber",
+                    label: "Card number"
+                })}}
+                {{ input_group({name: "cardNumber"})}}
+                {{ input_group({name: "cardNumber"})}}
+                {{ input_group({name: "cardNumber"})}}
+            </div>
+            <div class="billing__card-description">
+                {{ input_group({
+                    name:"expireDate",
+                    label: "Expire date"
+                })}}
+                {{ input_group({
+                    name:"cvv",
+                    label:"CVV code",
+                    description:"your description"
+                })}}
+            </div>
+        </div>
+        <div class="billing__container-paypal js-container-paypal">
+            форма для оплаты paypal
+        </div>
+        <div class="billing__checkboxes-container">
+            {{ checkbox({
+                id:"saveCard", 
+                text: "Save information of this credit card"
+            })}}
+            {{ checkbox({
+                id:"privacyPolicies", 
+                text:"I accept the terms and comditions and the Privacy Policies"
+            })}}
+        </div>
+    </div>
+{% endmacro %}
