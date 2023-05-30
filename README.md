@@ -1,6 +1,6 @@
 # SP.Starter
 
-Ссылка не тестовое: https://mpreterer.github.io/sborka-test/payment.html
+Ссылка не тестовое: https://sborka-tests-2.vercel.app/payment.html
 
 **Шаблон проекта для быстрого старта. Работает на Node 16+.**
 
